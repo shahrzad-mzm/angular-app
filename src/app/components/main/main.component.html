@@ -1,0 +1,28 @@
+<div class="container mt-4">
+
+  <table class="table">
+    <thead class="thead-dark ">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Age</th>
+      </tr>
+
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of employeesList">
+        <td>{{item.employee_age}}</td>
+        <td>{{ item.employee_name}}</td>
+        <td>{{ item.employee_salary}}</td>
+        <td>{{ item.id}}</td>
+        <td>
+          <button type="button" class="btn btn-success mx-2"
+            [routerLink]="'edit-employee-details/' + item.id">Edit</button>
+          <button type="button" class="btn btn-primary  mx-2" [routerLink]="'/employee-details/' + item.id">Details</button>
+          <button type="button" class="btn btn-danger" [routerLink]="['/add-record']">new record</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
