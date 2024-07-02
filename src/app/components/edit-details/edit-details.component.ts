@@ -42,10 +42,10 @@ export class EditDetailsComponent implements OnInit {
 
   sendEdit(){
   const params = { 
-    employee_name : this.detailsContent.data.employee_name,
-    employee_salary: this.detailsContent.data.employee_salary,
-    employee_age: this.detailsContent.data.employee_age,
-    id:this.detailsContent.data.id,
+    name : this.editDetailsForm.get("name")?.value,
+    salary: this.editDetailsForm.get("salary")?.value,
+    age: this.editDetailsForm.get("age")?.value,
+    id:this.editDetailsForm.get("id")?.value,
   };
 this.mainService.getEdit(this.detailsId,params).subscribe((response=>{
   if (response.status === "success") {

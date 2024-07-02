@@ -22,9 +22,9 @@ export class AddRecordComponent implements OnInit {
 
   addRecord() {
     const params = {
-      employee_name: this.addRecordForm.get("employee_name")?.value,
-      employee_salary: this.addRecordForm.get("employee_salary")?.value,
-      employee_age: this.addRecordForm.get("employee_age")?.value,
+      name: this.addRecordForm.get("name")?.value,
+      salary: this.addRecordForm.get("salary")?.value,
+      age: this.addRecordForm.get("age")?.value,
       id: this.addRecordForm.get("id")?.value,
     };
     this.mainService.addRecord(params).subscribe((response => {
